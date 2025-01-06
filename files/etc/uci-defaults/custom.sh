@@ -20,11 +20,11 @@ for iface in /sys/class/net/*; do
 done
 
 # 网络设置
-if [ "$count" -eq 1 ]; then
-  uci set network.lan.proto='dhcp'
-elif [ "$count" -gt 1 ]; then
-  uci set network.lan.ipaddr='192.168.100.1'
-fi
+#if [ "$count" -eq 1 ]; then
+ # uci set network.lan.proto='dhcp'
+#elif [ "$count" -gt 1 ]; then
+#  uci set network.lan.ipaddr='192.168.100.1'
+#fi
 
 # 设置所有网口可访问网页终端
 uci delete ttyd.@ttyd[0].interface
